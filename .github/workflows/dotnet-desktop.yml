@@ -65,4 +65,4 @@ jobs:
     - name: Build with dotnet
       run: dotnet build --configuration Release --no-restore
     - name: Publish
-      run: dotnet publish -c Release --output ./Release
+      run: dotnet publish WebApplication1.sln -c Release --output ./Release
