@@ -63,6 +63,6 @@ jobs:
 
     steps:
     - name: Build with dotnet
-      run: dotnet build ../../WebApplication1.csproj --configuration Release --no-restore
+      run: dotnet build WebApplication1.csproj --configuration Release --no-restore
     - name: Publish
-      run: dotnet publish ../../WebApplication1.csproj -c Release --output ./Release
+      run: dotnet publish WebApplication1.csproj -c Release --output ./Release
