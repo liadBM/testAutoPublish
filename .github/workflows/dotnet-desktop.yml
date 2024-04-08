@@ -65,4 +65,4 @@ jobs:
     - name: Build with dotnet
       run: dotnet build "C:\SpinFrame-test\WebApplication1" --configuration Release --no-restore
     - name: Publish
-      run: dotnet publish "C:\SpinFrame-test\WebApplication1" -c Release --output ./Release
+      run: dotnet publish "C:\SpinFrame-test\WebApplication1" -c Release --property PublishDir=./Release
