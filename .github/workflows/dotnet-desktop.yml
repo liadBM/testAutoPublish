@@ -41,8 +41,6 @@ name: .NET Core Desktop
 on:
   push:
     branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
 
 jobs:
 
@@ -62,6 +60,8 @@ jobs:
     #   Wap_Project_Path: your-wap-project-path                   # Replace with the path to your Wap project, i.e. MyWpf.App.Package\MyWpfApp.Package.wapproj.
 
     steps:
+    - name: Pull From Master
+      run: git pull origin master
     - name: Build with dotnet
       run: dotnet build "C:\SpinFrame-test\WebApplication1" --configuration Release --no-restore
     - name: Publish
