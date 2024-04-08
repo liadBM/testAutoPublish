@@ -61,7 +61,7 @@ jobs:
 
     steps:
     - name: Pull From Master
-      run: git pull origin master
+      run: cd "C:\SpinFrame-test\WebApplication1" ; git pull origin master
     - name: Build with dotnet
       run: dotnet build "C:\SpinFrame-test\WebApplication1" --configuration Release --no-restore
     - name: Publish
