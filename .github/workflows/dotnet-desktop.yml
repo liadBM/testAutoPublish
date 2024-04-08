@@ -58,10 +58,10 @@ jobs:
 
     steps:
     # - name: Add safe directory
-    #   run: git config --global --add safe.directory "$Project_Path"
+    #   run: git config --global --add safe.directory "%Project_Path%"
     - name: Pull From Master
-      run: cd "$Project_Path" ; git pull origin master
+      run: cd "%Project_Path%" ; git pull origin master
     - name: Build with dotnet
-      run: dotnet build "$Project_Path" --configuration Release --no-restore
+      run: dotnet build "%Project_Path%" --configuration Release --no-restore
     - name: Publish
-      run: dotnet publish "$Project_Path" -c Release --property PublishDir=./Release
+      run: dotnet publish "%Project_Path%" -c Release --property PublishDir=./Release
