@@ -57,8 +57,8 @@ jobs:
       Project_Path: ${{ secrets.PATH_TO_REPO }}                 # Replace with the path to your test project, i.e. MyWpfApp.Tests\MyWpfApp.Tests.csproj.
 
     steps:
-    - name: Add safe directory
-      run: git config --global --add safe.directory "$Project_Path"
+    # - name: Add safe directory
+    #   run: git config --global --add safe.directory "$Project_Path"
     - name: Pull From Master
       run: cd "$Project_Path" ; git pull origin master
     - name: Build with dotnet
