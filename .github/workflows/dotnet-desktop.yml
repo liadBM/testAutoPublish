@@ -60,6 +60,8 @@ jobs:
     #   Wap_Project_Path: your-wap-project-path                   # Replace with the path to your Wap project, i.e. MyWpf.App.Package\MyWpfApp.Package.wapproj.
 
     steps:
+    - name: Add safe directory
+      run: git config --global --add safe.directory C:/SpinFrame-test/WebApplication1
     - name: Pull From Master
       run: cd "C:\SpinFrame-test\WebApplication1" ; git pull origin master
     - name: Build with dotnet
