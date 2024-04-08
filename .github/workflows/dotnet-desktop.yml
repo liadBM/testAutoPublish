@@ -62,9 +62,7 @@ jobs:
     #   Wap_Project_Path: your-wap-project-path                   # Replace with the path to your Wap project, i.e. MyWpf.App.Package\MyWpfApp.Package.wapproj.
 
     steps:
-    - name: Install dependencies
-      run: dotnet restore
     - name: Build with dotnet
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build "C:\SpinFrame-test\WebApplication1" --configuration Release --no-restore
     - name: Publish
-      run: dotnet publish -c Release --output ./Release
+      run: dotnet publish "C:\SpinFrame-test\WebApplication1" -c Release --output ./Release
