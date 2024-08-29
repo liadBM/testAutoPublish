@@ -39,6 +39,12 @@ jobs:
         minor=${version_parts[1]}
         patch=${version_parts[2]}
         patch=$((patch+1))
+
+        if [[ $patch -gt 100 ]]; then
+          patch=0
+          minor=$((minor+1))
+        fi
+
         new_tag="v$major.$minor.$patch"
         echo "new_tag=$new_tag" >> $GITHUB_ENV
 
