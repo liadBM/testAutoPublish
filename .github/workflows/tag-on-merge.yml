@@ -13,10 +13,10 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
       with:
-        fetch-depth: 0  # Fetch all history so tags are included
+        fetch-depth: 0  # Fetch all history so tags are included.
 
     - name: Verify Tags
-      run: git tag -l  # List all tags for debugging purposes
+      run: git tag -l  # List all tags for debugging purposes.
 
     - name: Get the latest tag
       id: get-latest-tag
